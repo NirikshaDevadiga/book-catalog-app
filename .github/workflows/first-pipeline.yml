@@ -8,5 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download Repository
+        uses: actions/checkout@v4
+
       - name: Print Message
         run: echo "Hello from my first CI pipeline"
+
+      - name: Verify index.html exists
+        run:  ls index.html
